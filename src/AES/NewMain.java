@@ -5,8 +5,8 @@
  */
 package AES;
 
-import Implementación.Cifrado;
-
+import Implementación.Conversión;
+import java.util.Scanner;
 /**
  *
  * @author HP
@@ -19,9 +19,15 @@ public class NewMain {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Cifrado cifrado = new Cifrado();
+        Conversión cifrado = new Conversión();
+        Scanner tec = new Scanner(System.in);
+        
+        System.out.println("Ingrese el texto a decifrar");
+        String texto = tec.nextLine();
         
         
+        
+
         
     }
     

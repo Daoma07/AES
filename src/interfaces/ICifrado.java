@@ -11,6 +11,10 @@ package interfaces;
  */
 public interface ICifrado {
 
-    String SubBytes(String hexadecimal);
+    String[][] SubBytes(String[][] hexadecimal);
+    String[][] AddRoundKey(String[][] hexadecimalClaro, String[][] hexadecimalContraseña);
+    String[][] ShiftRowds(String[][] matriz);
+    String[][] MixColumns(String[][] matriz);
+    
     
 }
