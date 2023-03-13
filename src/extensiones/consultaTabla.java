@@ -5,6 +5,8 @@
  */
 package extensiones;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author HP
@@ -36,6 +38,33 @@ public class consultaTabla {
 
         String resultado = Integer.toHexString(tabla[(Character.getNumericValue(hexadecimal.charAt(0)))][(Character.getNumericValue(hexadecimal.charAt(1)))]);
         return resultado;
+    }
+
+    public String[] mixTabla(int fila) {
+        String filaNuevaa[] = null;
+        String tabla[][] = {
+            /*   2          3         1          1 */
+            {"00000010", "00000011", "00000001", "00000001"},
+            {"00000001", "00000010", "00000011", "00000001"},
+            {"00000001", "00000001", "00000010", "00000011"},
+            {"00000011", "00000001", "00000001", "00000010"},};
+
+        if (fila == 1) {
+            String filaNueva[] = {"00000010", "00000011", "00000001", "00000001"};
+            return filaNueva;
+        } else if (fila == 2) {
+            String filaNueva[] = {"00000001", "00000010", "00000011", "00000001"};
+            return filaNueva;
+        } else if (fila == 3) {
+            String filaNueva[] = {"00000001", "00000001", "00000010", "00000011"};
+            return filaNueva;
+        } else if (fila == 3) {
+            String filaNueva[] = {"00000011", "00000001", "00000001", "00000010"};
+            return filaNueva;
+        }
+
+        return filaNuevaa;
+
     }
 
 }
